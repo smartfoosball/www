@@ -135,14 +135,14 @@
 			<h2>自己动手 DIY</h2>
 			<div class="line">
 				<div class="unit size2of3">
-					<h3>The Hardware:</h3>
-					<p>First you need some hardware to get your foosball table online. For our prototype we used an <a href="http://www.watterott.com/de/Arduino-Uno">Arduino Uno</a> with <a href="http://www.watterott.com/de/SparkFun-WiFly-Shield">Wifly-Shield</a> plus two <a href="http://www.amazon.de/gp/product/B0002OH8SQ">infrared photo sensors</a>. The tricky part is to attach the photo sensors so you can measure when a goal is scored. Since every foosball table is designed differently, it’s tough to suggest the correct installation. But, here is how it worked for us.</p>
+					<h3>硬件改造</h3>
+					<p>我们用的是机智云的服务，而机智云又正好提供了一块免费的开发板—GoKit，上面有一些常见的传感器和一块 WiFi 模块。由于 GoKit 自带的传感器还不太够用，于是我们决定对它进行一些改造。最主要的改动是我们加了两个红外传感器，用来感应进球，从而可以实现自动记分；另外我们还增加了一块 LED 显示屏，用来显示当前的分数。安装是个技术加体力的活，也最能反映创客和码农之间的区别。因为每张球台都不一样，你一定要发挥出色的观察和设计能力才能把它装好。</p>
 				</div>
 				<div class="unit lastUnit size1of3">
 					<img src="/images/visuals/vs_shoppinglist.jpg" width="225" height="225" alt="Shopping list"/>
 				</div>
 			</div>
-			<h3>Instructions:</h3>
+			<h3>步骤</h3>
 			<div class="line">
 				<dl class="unit size1of3">
 					<dt>
@@ -150,7 +150,7 @@
 							<img src="/images/visuals/vs_build_step1.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 1. &nbsp;</b> Reverse engineer the photo sensor circuit</dd>
+					<dd><b>第一步、&nbsp;</b> 基本的电路设计</dd>
 				</dl>
 				<dl class="unit size1of3">
 					<dt>
@@ -158,7 +158,7 @@
 							<img src="/images/visuals/vs_build_step2.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 2. &nbsp;</b> Test the photo sensor in action</dd>
+					<dd><b>第二步、&nbsp;</b>测试传感器</dd>
 				</dl>
 				<dl class="unit lastUnit size1of3">
 					<dt>
@@ -166,7 +166,7 @@
 							<img src="/images/visuals/vs_build_step3.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 3. &nbsp;</b> Install the photo sensor in the guideways behind the goals</dd>
+					<dd><b>第三步、&nbsp;</b>测试 LED 显示屏</dd>
 				</dl>
 			</div>
 			<div class="line">
@@ -176,7 +176,7 @@
 							<img src="/images/visuals/vs_build_step4.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 4. &nbsp;</b> Wire everything and mount it to a wooden board</dd>
+					<dd><b>第四步、&nbsp;</b>重新烧写 GoKit 上的 MCU 程序</dd>
 				</dl>
 				<dl class="unit size1of3">
 					<dt>
@@ -184,7 +184,7 @@
 							<img src="/images/visuals/vs_build_step5.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 5. &nbsp;</b> Program the Arduino using the provided SDK</dd>
+					<dd><b>第五步、&nbsp;</b>安装</dd>
 				</dl>
 				<dl class="unit lastUnit size1of3">
 					<dt>
@@ -192,18 +192,14 @@
 							<img src="/images/visuals/vs_build_step6.jpg" width="227" height="170" alt=""/>
 						</span>
 					</dt>
-					<dd><b>Step 6. &nbsp;</b> Screw the board to the foosball table</dd>
+					<dd><b>第六步、&nbsp;</b>联调测试</dd>
 				</dl>
 			</div>
 			<div class="subsection">
-				<h3>The Software:</h3>
+				<h3>软件部分</h3>
 				<div class="line">
 					<div class="unit size1of2">
-						<p>The software is completely open source. So feel free to download and use it.</p>
-						<h4>More technical details:</h4>
-						<p>The Arduino microcontroller notifies a NodeJS server via HTTP over WiFi. This data is then stored in a CouchDB.</p>
-						<p>For our Mobile WebApp we used HTML5, CSS3 and JavaScript to display the score in real time. It listens to the NodeJS server via WebSockets.</p>
-						<p>The game statistics engine is implemented as a CouchApp. Both apps are powered by Amazon’s EC2 and Cloudfront WebServices.</p>
+						<p>我们的软件，包括这个网站，都是开源的。你可以在 GitHub 上下载所有的代码。玩得开心！</p>
 					</div>
 					<div class="unit lastUnit size1of2">
 						<span class="shadow">
@@ -214,17 +210,19 @@
 			</div>
 		</div>
 		<div class="download">
-			<a href="https://github.com/sinnerschrader/digitalfoosball">Download</a>
+			<a href="https://github.com/smartfoosball">Download</a>
 		</div>
 	</div>
 
 	<!-- AddThis Button BEGIN -->
+	<!--
 	<div class="addthis_toolbox">
 		<a class="addthis_button_email">Email</a>
 		<a class="addthis_button_facebook">Send to Facebook</a>
 		<a class="addthis_button_twitter">Tweet This</a>
 		<a class="addthis_button_expanded">View more services</a>
 	</div>
+	-->
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>

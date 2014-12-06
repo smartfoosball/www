@@ -122,13 +122,17 @@
 			</div>
 		</div>
 		<div class="section js_section" id="inaction">
-			<h2>The Foosball Table in Action</h2>
-			<div id="slideshow" class="slideshow shadow">
-				<p class="loading">Loading...</p>
+			<h2>精彩瞬间</h2>
+			<div id="slider1_container" class="slideshow shadow">
+				<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 720px; height: 478px;">
+					<div><img u="image" src="/images/slides/image1.jpg" /></div>
+					<div><img u="image" src="/images/slides/image2.jpg" /></div>
+					<div><img u="image" src="/images/slides/image3.jpg" /></div>
+				</div>
 			</div>
 		</div>
 		<div class="section js_section" id="build">
-			<h2>Build Your Own</h2>
+			<h2>自己动手 DIY</h2>
 			<div class="line">
 				<div class="unit size2of3">
 					<h3>The Hardware:</h3>
@@ -223,67 +227,22 @@
 	</div>
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-	<script type="text/javascript">window.jQuery || document.write('<script src="js/libs/jquery-1.6.min.js">\x3C/script>')</script>
-	<script type="text/javascript" src="/extensions/js/kickerapp.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
+	<script type="text/javascript" src="/extensions/js/libs/jssor.slider.mini.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			var options = { $AutoPlay: true };
+			var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+		});
+	</script>
 
 	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
 	<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dc98831344f73a8"></script>
 	<!-- AddThis Button END -->
 
-	<div class="twtr">
-		<a href="http://twitter.com/digitalfoosball" target="_blank" title="@digitalfoosball on Twitter">@digitalfoosball</a>
-		<script type="text/javascript" src="//widgets.twimg.com/j/2/widget.js"></script>
-		<script type="text/javascript">
-			new TWTR.Widget({
-				version: 2,
-				type: 'profile',
-				rpp: 1,
-				interval: 6000,
-				width: 'auto',
-				height: 70,
-				theme: {
-					shell: {
-						background: '#f8f8f8',
-						color: '#222'
-					},
-					tweets: {
-						background: '#f8f8f8',
-						color: '#222',
-						links: '#0b0'
-					}
-				},
-				features: {
-					scrollbar: false,
-					loop: false,
-					live: false,
-					hashtags: false,
-					timestamp: true,
-					avatars: false,
-					behavior: 'all'
-				}
-			}).render().setUser('digitalfoosball').start();
-		</script>
-	</div>
-
-	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-
-	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-	<script src="http://www.google.com/uds/solutions/slideshow/gfslideshow.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		google.load("feeds", "1");
-		google.setOnLoadCallback(function() {
-				new GFslideShow("http://picasaweb.google.com/data/feed/base/user/SinnerSchraderBilder/albumid/5605839639148650449?kind=photo&tag=Action&thumbsize=720u", "slideshow", {
-				displayTime: 6000,
-				transistionTime: 400,
-				fullControlPanel: true,
-				fullControlPanelSmallIcons: true
-			});
-		});
-	</script>
-
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-21912271-3']);
+		_gaq.push(['_setAccount', 'UA-42371101-1']);
 		_gaq.push(['_trackPageview']);
 		_gaq.push(['_trackPageLoadTime']);
 
@@ -296,24 +255,6 @@
 		s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-
-	<!-- SiteCatalyst code version: H.23.3.
-	Copyright 1996-2011 Adobe, Inc. All Rights Reserved
-	More info available at http://www.omniture.com -->
-	<script type="text/javascript" src="/extensions/lib/s_code.js"></script>
-	<script type="text/javascript"><!--
-	/* You may give each page an identifying name, server, and channel on
-	the next lines. */
-	s.pageName="DF:Digital Foosball"
-	s.server="DF"
-	/* Conversion Variables */
-	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-	var s_code=s.t();if(s_code)document.write(s_code)//--></script>
-	<script language="JavaScript" type="text/javascript"><!--
-	if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
-	//--></script><noscript><img src="//sinnerschraderdeutschlandgmbh.122.2o7.net/b/ss/sschraderprod/1/H.23.3--NS/0"
-	height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
-	<!-- End SiteCatalyst code version: H.23.3. -->
 
 </body>
 </html>
